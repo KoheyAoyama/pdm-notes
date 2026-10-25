@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="顧客理解、ビジョンと戦略、意思決定、仮説検証。PdMとして大切にしている考えと判断基準。">
+  <meta name="author" content="Kohey Aoyama">
+  <meta name="theme-color" content="#f8f8f5">
+  <title>PdMの思想と判断基準 — Kohey Aoyama</title>
+  <style>
+    :root{--paper:#f8f8f5;--surface:#fff;--ink:#252e2c;--muted:#6d7773;--accent:#266356;--line:#e1e6e2;--soft:#edf3ef;--font:-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Kaku Gothic ProN","Yu Gothic",Meiryo,sans-serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:36px}body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--font);-webkit-font-smoothing:antialiased}
+    a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:4px}a:hover{color:#153e35}:focus-visible{outline:2px solid var(--accent);outline-offset:5px}
+    .skip{position:fixed;left:16px;top:-80px;z-index:20;padding:10px 16px;background:white;border:1px solid var(--line)}.skip:focus{top:16px}
+    .layout{display:grid;grid-template-columns:208px minmax(0,760px);gap:72px;max-width:1184px;margin:auto;padding:64px 48px 0}
+    .sidebar{position:sticky;top:48px;align-self:start;max-height:calc(100vh - 80px);overflow:auto;padding-bottom:30px}
+    .brand{display:flex;align-items:center;gap:10px;color:var(--ink);font-size:16px;font-weight:700;text-decoration:none;letter-spacing:.04em}.brand-mark{height:22px;width:4px;background:var(--accent);border-radius:2px}
+    .author{font-size:12px;color:var(--muted);margin:9px 0 46px 14px;letter-spacing:.03em}.nav-label{font-size:11px;color:var(--muted);letter-spacing:.1em;margin:0 0 13px 12px}
+    .toc{display:grid;gap:4px}.toc a{display:flex;align-items:baseline;gap:12px;padding:11px 12px;font-size:13px;line-height:1.65;color:var(--muted);text-decoration:none;border-radius:6px;transition:background .15s,color .15s}.toc a:hover{background:#f0f1ec;color:var(--ink)}.toc a[aria-current="location"]{background:var(--soft);color:var(--accent);font-weight:600}.toc-number{font-size:10px;font-variant-numeric:tabular-nums;letter-spacing:.06em;opacity:.7}
+    .side-foot{margin:32px 12px 0;padding-top:20px;border-top:1px solid var(--line);font-size:11px;color:var(--muted);line-height:1.9}.side-foot a{color:inherit}
+    main{min-width:0}.hero{padding:1px 0 34px;border-bottom:1px solid var(--line);margin-bottom:33px}.eyebrow{margin:0 0 20px;color:var(--accent);font-size:12px;font-weight:600;letter-spacing:.1em}h1{font-size:clamp(28px,3.3vw,42px);font-weight:700;letter-spacing:-.04em;line-height:1.55;margin:0;overflow-wrap:anywhere}.meta{display:flex;gap:18px;align-items:center;color:var(--muted);font-size:12px;line-height:1.7;margin:20px 0 0}.meta span+span{border-left:1px solid var(--line);padding-left:18px}
+    .mobile-toc{display:none}.prose{font-size:16px;line-height:2;overflow-wrap:anywhere}.prose>p{margin:0 0 22px}.prose>p:first-child{color:var(--muted);font-size:14px;line-height:1.95;margin-bottom:48px}
+    h2{display:flex;align-items:baseline;gap:16px;font-size:25px;letter-spacing:-.015em;line-height:1.65;margin:62px 0 25px;padding-top:35px;border-top:1px solid var(--line);font-weight:700;scroll-margin-top:38px}h2:first-of-type{margin-top:40px}.section-number{font-size:12px;color:var(--accent);letter-spacing:.06em;font-weight:500;font-variant-numeric:tabular-nums}
+    h3{font-size:18px;line-height:1.7;margin:35px 0 15px;font-weight:700;letter-spacing:0}ul,ol{padding-left:24px;margin:17px 0 25px}li{padding-left:3px;margin:7px 0}li::marker{color:#7e948c}strong{font-weight:650}hr{border:0;border-top:1px solid var(--line);margin:42px 0 24px}
+    .table-scroll{overflow-x:auto;max-width:100%;margin:25px 0 30px;border:1px solid var(--line);border-radius:8px;background:var(--surface);-webkit-overflow-scrolling:touch}.table-scroll:focus-visible{outline-offset:3px}table{border-collapse:collapse;width:100%;font-size:13px;line-height:1.85;text-align:left}th,td{padding:14px 16px;vertical-align:top;border-bottom:1px solid var(--line)}th{background:#f0f4f1;font-size:12px;font-weight:600;color:#4c6057}th:first-child,td:first-child{width:23%;min-width:100px}td:first-child{font-weight:500;color:#345647}tr:last-child td{border-bottom:0}table:has(th:nth-child(3)){min-width:560px}table:has(th:nth-child(3)) td:first-child{width:23%}table:not(:has(th:nth-child(3))) td:first-child{width:30%}.table-scroll strong{font-weight:600}
+    .page-footer{display:flex;justify-content:space-between;gap:20px;align-items:center;border-top:1px solid var(--line);padding:28px 0 45px;margin-top:56px;color:var(--muted);font-size:11px}.page-footer a{color:inherit}.back-top{white-space:nowrap;text-decoration:none}
+    @media(min-width:1500px){.layout{padding-top:80px}}
+    @media(max-width:1040px){.layout{grid-template-columns:170px minmax(0,1fr);gap:40px;padding:44px 30px 0}.toc a{font-size:12px;padding:9px 8px;gap:8px}.sidebar{top:32px}.prose{font-size:15px}h2{font-size:23px}}
+    @media(max-width:740px){html{scroll-padding-top:20px}.layout{display:block;padding:30px 22px 0;max-width:720px}.sidebar{display:none}.hero{padding-bottom:25px;margin-bottom:22px}.eyebrow{font-size:11px;margin-bottom:13px}h1{font-size:29px;letter-spacing:-.035em;line-height:1.5}.meta{font-size:11px;gap:12px;margin-top:17px}.meta span+span{padding-left:12px}.mobile-toc{display:block;margin:0 0 28px;border:1px solid var(--line);border-radius:8px;background:#f2f4ef}.mobile-toc summary{cursor:pointer;padding:14px 16px;font-size:13px;color:var(--accent);font-weight:600}.mobile-toc nav{padding:0 8px 10px;display:grid;grid-template-columns:1fr 1fr;gap:1px}.mobile-toc .toc a{font-size:12px;padding:8px}.prose{font-size:15px;line-height:2}.prose>p{margin-bottom:21px}.prose>p:first-child{font-size:13px;line-height:1.95;margin-bottom:35px}h2{font-size:22px;gap:12px;margin:43px 0 23px;padding-top:26px;line-height:1.55}h3{font-size:17px;margin-top:31px}.section-number{font-size:11px}ul,ol{padding-left:21px}li{padding-left:0;margin:8px 0}.table-scroll{margin:23px -2px 28px;width:calc(100% + 4px);max-width:calc(100% + 4px);border-radius:6px}th,td{padding:12px 13px}table{font-size:12px;line-height:1.9}.page-footer{font-size:10px;margin-top:40px;padding-bottom:30px}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.toc a{transition:none}}
+    @media print{body{background:white}.layout{display:block;max-width:none;padding:0}.sidebar,.mobile-toc,.back-top{display:none}.hero{margin-bottom:20px}h1{font-size:24pt}h2{break-after:avoid;margin-top:25px;font-size:18pt}h3{break-after:avoid}.prose{font-size:10pt}.table-scroll{overflow:visible;break-inside:avoid}table:has(th:nth-child(3)){min-width:0}a{color:inherit;text-decoration:none}.page-footer{margin-top:20px}}
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ</a>
+  <div class="layout" id="top">
+    <aside class="sidebar" aria-label="目次">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true"></span>PdMノート</a>
+      <p class="author">Kohey Aoyama</p>
+      <p class="nav-label">目次</p>
+      <nav class="toc" aria-label="文書の目次"><a href="#section-1" data-section="section-1"><span class="toc-number">01</span><span>商い主義</span></a>
+<a href="#section-2" data-section="section-2"><span class="toc-number">02</span><span>全体像</span></a>
+<a href="#section-3" data-section="section-3"><span class="toc-number">03</span><span>顧客理解と提供価値</span></a>
+<a href="#section-4" data-section="section-4"><span class="toc-number">04</span><span>提供範囲と負担</span></a>
+<a href="#section-5" data-section="section-5"><span class="toc-number">05</span><span>ビジョンと戦略</span></a>
+<a href="#section-6" data-section="section-6"><span class="toc-number">06</span><span>行動と成果物</span></a>
+<a href="#section-7" data-section="section-7"><span class="toc-number">07</span><span>事業検証</span></a>
+<a href="#section-8" data-section="section-8"><span class="toc-number">08</span><span>強みと成長課題</span></a></nav>
+      <p class="side-foot">更新 2026年10月25日<br><a href="https://github.com/KoheyAoyama/pdm-notes">GitHub</a></p>
+    </aside>
+    <main id="main">
+      <header class="hero"><p class="eyebrow">考えと判断の記録</p><h1>PdMの思想と判断基準</h1><p class="meta"><span>Kohey Aoyama</span><span>更新 2026年10月25日</span></p></header>
+      <details class="mobile-toc"><summary>目次</summary><nav class="toc" aria-label="文書の目次"><a href="#section-1" data-section="section-1"><span class="toc-number">01</span><span>商い主義</span></a>
+<a href="#section-2" data-section="section-2"><span class="toc-number">02</span><span>全体像</span></a>
+<a href="#section-3" data-section="section-3"><span class="toc-number">03</span><span>顧客理解と提供価値</span></a>
+<a href="#section-4" data-section="section-4"><span class="toc-number">04</span><span>提供範囲と負担</span></a>
+<a href="#section-5" data-section="section-5"><span class="toc-number">05</span><span>ビジョンと戦略</span></a>
+<a href="#section-6" data-section="section-6"><span class="toc-number">06</span><span>行動と成果物</span></a>
+<a href="#section-7" data-section="section-7"><span class="toc-number">07</span><span>事業検証</span></a>
+<a href="#section-8" data-section="section-8"><span class="toc-number">08</span><span>強みと成長課題</span></a></nav></details>
+      <article class="prose"><p>この文書は、複数のチャットで整理してきた考えと、曽根原春樹さんの記事から得た示唆を統合したもの。企業事例の解釈は、自身の考察として扱う。</p>
+<h2 id="section-1"><span class="section-number" aria-hidden="true">01</span>商い主義</h2>
+<p>自身が「商い主義」と呼んでいる仕事観を中心に置く。</p>
+<ul>
+<li>顧客に価値を届け、対価を得て、継続して選ばれる状態を作る。</li>
+<li>一社への提供で終わらず、他の顧客にも広げ、利益が残る形にする。</li>
+<li>職種の担当範囲に閉じず、サービス、売り方、提供体制をつなげて考える。</li>
+<li>自分の判断と働きかけが、顧客の成果や事業の結果にどうつながったかを見る。</li>
+</ul>
+<p>デザイナー時代の「介在価値」から、目指す状態と、そこへ進むための判断・行動を主体的に担う方向へ広がっている。</p>
+<h2 id="section-2"><span class="section-number" aria-hidden="true">02</span>全体像</h2>
+<h3 id="section-2-1">活動の循環</h3>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>要素</th>
+<th>主な問い</th>
+<th>他の要素との関係</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ビジョン</td>
+<td>顧客にどんな可能性を渡し、どんな世界を実現するか</td>
+<td>Big Pictureを描き、戦略の方向を定める</td>
+</tr>
+<tr>
+<td>顧客理解</td>
+<td>誰が、何を達成したくて、何に困っているか</td>
+<td>ビジョン・戦略を具体化し、前提を確かめる</td>
+</tr>
+<tr>
+<td>戦略</td>
+<td>どの顧客・市場で、何を変え、なぜそこに賭けるか</td>
+<td>課題選択と投資判断の基準になる</td>
+</tr>
+<tr>
+<td>課題選択・資源配分</td>
+<td>どの問題が解決に値し、今どこまで投資するか</td>
+<td>問題を引き受ける範囲と優先順位を定める</td>
+</tr>
+<tr>
+<td>仮説検証</td>
+<td>何が不確かで、何を確かめれば判断が変わるか</td>
+<td>課題・解決策・事業成立の仮説を確かめる</td>
+</tr>
+<tr>
+<td>実行</td>
+<td>選んだ方針を、誰が、どこまでやり切るか</td>
+<td>モーションとアウトプットで、選んだ方針を実行に移す</td>
+</tr>
+<tr>
+<td>結果からの更新</td>
+<td>期待した変化と実際の結果に、どんな差があるか</td>
+<td>手段・課題選択・戦略の前提へ戻して更新する</td>
+</tr>
+</tbody></table></div>
+<p>ビジョン、顧客理解、戦略、課題選択・資源配分、仮説検証、実行、結果からの更新を、相互に行き来しながら進める。顧客から得た事実によって戦略へ戻ることも、実行中に仮説や問題の定義を見直すこともある。視座・視野・時間軸を広げ、目の前の課題だけに判断を閉じない。</p>
+<h3 id="section-2-2">意思決定</h3>
+<p>意思決定は、すべての活動と、その間を行き来する過程に常に存在する。どんな世界を目指すか、顧客の状況をどう捉えるか、何に集中するか、何を検証するか、どう実行するか、結果を受けて何を変えるかを、その都度判断する。</p>
+<p>曽根原春樹さんの「プロダクトのインパクトは自分達の意思決定レベル以上に上ブレすることはない」を、全体に適用する判断原則として捉える。自分の実践では、意思決定のレベルを、判断する範囲と質として扱う。ビジョンから日々の実行まで、あらゆる場面で判断の質が成果に影響すると考える。</p>
+<p>そのため、意思決定を全体に共通する観点として点検する。何を判断対象にしたか、どんな選択肢と根拠があるか、思い込みに偏っていないか、どの条件で判断を更新するかを確かめる。</p>
+<p><a href="https://speakerdeck.com/sonehara/pmconf2024-purodakutomaneziyanoliang-iyi-si-jue-ding-nituitequestsuru-2f3db2b2-56e0-44d7-82aa-10af2520554d">参考：曽根原春樹「プロダクトマネージャーの良い意思決定についてQuestする」</a></p>
+<h2 id="section-3"><span class="section-number" aria-hidden="true">03</span>顧客理解と提供価値</h2>
+<p>顧客理解では、発言や要望に加えて、実際の行動と、その背景にある制約を把握する。</p>
+<p>確認事項</p>
+<ul>
+<li>達成したいことと、期待する成果</li>
+<li>現在の手順、判断、例外処理、回避策</li>
+<li>すでに負担している時間・費用・人員</li>
+<li>利用者、買い手、管理者、周辺関係者の違い</li>
+<li>一人・一社に固有の事情と、他にも共通する事情</li>
+</ul>
+<p>提供価値は、以前から整理している次の二つで捉える。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>観点</th>
+<th>意味</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>段取りの最適性</td>
+<td>目的に合った進め方になっているか</td>
+</tr>
+<tr>
+<td>利得の実効性</td>
+<td>期待した成果・変化を実際に得られるか</td>
+</tr>
+</tbody></table></div>
+<p>手間の削減だけで価値を判断しない。目的によっては、残すべき手間もある。</p>
+<p>顧客理解の成果は、接触回数や収集量に加え、仮説・優先順位・作るものがどう変わったかで確認する。</p>
+<h3 id="section-3-1">価値への感性</h3>
+<p>nanameue時代、タイへの出張中に代表の石濱さんから「脳汁あふれる体験」という考え方を教わった。人が何に興奮し、何に夢中になるか。その心の機微を感じ取る力を磨く。「自分こそ一番のユーザーであれ」という教えもこれにつながる。石濱さん自身が最もサービスを使い倒し、事業に深く入り込んでいた。自分の感性を出発点としつつ、顧客の反応や行動からその理解を更新する。</p>
+<h2 id="section-4"><span class="section-number" aria-hidden="true">04</span>提供範囲と負担</h2>
+<p>提供価値を考える際には、次の両方を見る。</p>
+<ul>
+<li>顧客が何をできるようになるか</li>
+<li>顧客が何を抱え続けなくて済むようになるか</li>
+</ul>
+<p>対象は機能だけでなく、導入、運用、保守、例外対応、環境変化への対応も含む。どこまで引き受けるかは、顧客価値と自社の持続性を踏まえて決める。</p>
+<p>同時に、次を確認する。</p>
+<ul>
+<li>ベンダーが負担を吸収したか</li>
+<li>顧客企業内の別の人へ負担を移しただけではないか</li>
+<li>新たな判断や作業を増やしていないか</li>
+<li>行動が繰り返された結果、問題を悪化させないか</li>
+</ul>
+<p>具体例</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>事例</th>
+<th>得られる価値</th>
+<th>併せて確認すること</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>マイページ</td>
+<td>管理側が従業員との共通接点を持てる</td>
+<td>従業員が入口の使い分けに迷わないか</td>
+</tr>
+<tr>
+<td>採用スカウトの効率化</td>
+<td>採用側の送信負担が減る</td>
+<td>候補者の負担や反応低下を通じ、双方の成果を損なわないか</td>
+</tr>
+<tr>
+<td>コンテンツ投稿の容易化</td>
+<td>発信への参加者が増える</td>
+<td>受け手の価値と、良いコンテンツの継続供給につながるか</td>
+</tr>
+</tbody></table></div>
+<p>個別の指標が上がっても、顧客の成果や事業全体の価値が下がる場合がある。これを「最適化の罠」として捉える。選んだ課題の中で改善を進めるときも、指標と目標自体を見直す。</p>
+<h3 id="section-4-1">成果と周囲への影響</h3>
+<p>プロダクトの成果は、人の行動や成果がどう変わったかによって確かめる。これをアウトカムとして捉える。ただし、行動が変わったことと価値が生まれたことは同じではない。他の人の負担、商慣習、組織の仕事、長期的な結果まで見る。数字が改善したときも、全体の価値を損なっていないかを問い直す。</p>
+<h2 id="section-5"><span class="section-number" aria-hidden="true">05</span>ビジョンと戦略</h2>
+<h3 id="section-5-1">目指す世界</h3>
+<p>ビジョンは、顧客にどんな可能性を渡し、どんな世界を実現したいかを示す。ドメインと顧客事情を広く深く知った上で、現在の困り事を直す範囲を超えて、顧客が何をできるようになるかを考える。その世界で誰がどう働き、何が変わるかという全体像を、Big Pictureとして描く。戦略は、その未来へ進むための選択として組み立てる。</p>
+<p>ビジョンと戦略を考える際にも、第2節の意思決定の原則を適用する。機能の改善だけを判断対象にせず、どんな世界を目指し、どの顧客にどんな変化を届けるかから考え、取り組むべき課題と期待する成果を定める。</p>
+<h3 id="section-5-2">問いと課題解決</h3>
+<p>問いを立てて目指す世界を描き、実現するための戦略を選び、課題解決の構造を使って顧客に届ける価値を具体化する。</p>
+<p>プロダクトビジョンは、「誰の世界を、なぜ、どのような状態へ変えたいのか」を問いながら組み立てる。次の五つの問いを、顧客とニーズ、顧客理解、指標、ロードマップにつなげて考える。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th><strong>問い</strong></th>
+<th><strong>対応するもの</strong></th>
+<th><strong>明らかにすること</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Who：誰の世界を変えたいか</td>
+<td>顧客</td>
+<td>誰に向き合うのか</td>
+</tr>
+<tr>
+<td>Why：なぜ変える必要があるか</td>
+<td>ニーズ</td>
+<td>その人にとって、なぜ変化が必要なのか</td>
+</tr>
+<tr>
+<td>What：現在の世界と制約はどうなっているか</td>
+<td>顧客理解</td>
+<td>どんな状況で、何に制約されているのか</td>
+</tr>
+<tr>
+<td>When：実現したと、どうわかるか</td>
+<td>指標</td>
+<td>どんな変化が起きれば、目指す状態に届いたと言えるか</td>
+</tr>
+<tr>
+<td>How：どう変化を起こすか</td>
+<td>ロードマップ</td>
+<td>どんな手段と順序で進めるか</td>
+</tr>
+</tbody></table></div>
+<p>問いへの答えをつなぐことで、目指す世界の姿が具体的になる。顧客の現状や制約を踏まえ、誰に集中するか、何から変えるか、どこに力を使うかを選ぶと戦略になる。その選択を、具体的な取り組みと順序として示すとロードマップになる。</p>
+<p>戦略に沿ってバリュープロポジションを考える際には、顧客の現状とありたい姿を捉え、その差から取り組む問題と解決策を具体化する。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th><strong>課題解決の構造</strong></th>
+<th><strong>考えること</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>現状（As Is）</td>
+<td>その顧客は、今どんな状態にいるか</td>
+</tr>
+<tr>
+<td>ありたい姿（To Be）</td>
+<td>ビジョンが実現した世界で、その顧客はどうなれるか</td>
+</tr>
+<tr>
+<td>差（Gap）</td>
+<td>現状とありたい姿の間に、どんな隔たりがあるか</td>
+</tr>
+<tr>
+<td>取り組む問題（Problem）</td>
+<td>その差のうち、何を解決することが重要か</td>
+</tr>
+<tr>
+<td>解決策（Solution）</td>
+<td>このプロダクトで、どう解決するか</td>
+</tr>
+</tbody></table></div>
+<p>この構造から、「誰の、どんな問題を、どう解決し、どんな価値を届けるのか」をまとめる。人物の属性だけでなく、場面、行動、できるようになること、本人にとってのうれしさまで含めて、バリュープロポジションとして描く。</p>
+<p>プロダクトビジョンは目指す世界を示し、戦略はそこへ向かうための選択を定め、バリュープロポジションは対象顧客に届ける具体的な価値を示す。顧客から得た事実に応じて、現状やありたい姿、戦略の前提も見直す。</p>
+<h3 id="section-5-3">世界観とキャラクター</h3>
+<p>プロダクトビジョンで目指す世界観を描き、バリュープロポジションで、その中のキャラクターと行動・体験を描く。どんな人が何をし、何ができるようになり、何がうれしいかまでを一続きで捉える。企画には両方が必要だと考える。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th><strong>要素</strong></th>
+<th><strong>考えること</strong></th>
+<th><strong>比喩で捉えると</strong></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>プロダクトビジョン</td>
+<td>どんな世界を目指し、そこで人はどんな体験をしているか</td>
+<td>世界観を描く</td>
+</tr>
+<tr>
+<td>ミッション</td>
+<td>その実現に向け、自分たちは何を担うか</td>
+<td>世界を実現する側の役割を定める</td>
+</tr>
+<tr>
+<td>バリュープロポジション</td>
+<td>どんな人が、どの場面で何をし、何ができるようになり、何がうれしいか</td>
+<td>キャラクターと、その行動・体験を描く</td>
+</tr>
+</tbody></table></div>
+<p>世界観を目指して、どんなキャラクターが何をするのかを明らかにする。人物の属性だけで終わらせず、状況、行動、できるようになること、本人にとってのうれしさまでを、バリュープロポジションとして一緒に描く。</p>
+<p>両者の違いは、時間軸だけではなく、捉える範囲と視点にある。プロダクトビジョンも具体的に描けるし、まだ存在しない製品についてバリュープロポジションを考えることもできる。</p>
+<p>一つのビジョンから、顧客ごとに複数のバリュープロポジションが生まれる。LinkedInなら、すべての働く人に仕事や事業の機会をつくるというビジョンに対し、求職者には「自分に合う求人を見つけやすくなる」、採用担当者には「必要な人材を探しやすくなる」という価値につながる。これは公式説明をもとにした自身の整理。</p>
+<p>企画では、世界観を描き、そこに登場する人を定め、その人が何をするのかを具体化する。そこで生まれる良い変化が、顧客にとって選ぶ理由になるかを確かめる。世界観とキャラクターの行動・体験を行き来しながら、戦略や作るものを判断する。</p>
+<p>参考：<a href="https://www.linkedin.com/pulse/vision-execution-why-what-how-behind-linkedins-products-tomer-cohen-34l4f">LinkedInのビジョンと製品づくり</a>／<a href="https://www.linkedin.com/help/linkedin/answer/a7475654">求職者向けの価値</a>／<a href="https://www.linkedin.com/help/linkedin/answer/a413474/search-in-recruiter-overview?lang=en">採用担当者向けの価値</a></p>
+<p>参考：<a href="https://www.strategyzer.com/value-proposition">Strategyzer「バリュープロポジション」</a></p>
+<h3 id="section-5-4">課題選択と資源配分</h3>
+<p>戦略では、以下を明確にする。</p>
+<ul>
+<li>対象とする顧客・市場と、選ばれる価値・根拠</li>
+<li>ビジョンへの進み方と、引き受ける不確実性</li>
+<li>優先すること・見送ること</li>
+<li>仮説を見直す条件</li>
+</ul>
+<p>ロードマップは、この判断を具体的な取り組みや順序へ反映したものとして扱う。</p>
+<p>事業戦略は、別のチャットで整理した次の三つを接続して考える。</p>
+<ul>
+<li>サービス戦略：何を、どこまで提供するか</li>
+<li>市場の獲得・拡大戦略：どう届け、顧客を増やすか</li>
+<li>組織戦略：どの体制・能力で実現するか</li>
+</ul>
+<p>優先順位を伝える際は、順位や配分率に加えて、背景と判断条件を共有する。</p>
+<ul>
+<li>なぜ今重要なのか</li>
+<li>どんな成果を、いつまでに期待するのか</li>
+<li>どの前提に基づいているか</li>
+<li>どこまで取り組むか</li>
+<li>何が分かったら、増やす・変える・止めるか</li>
+</ul>
+<p>資源配分は仮説として扱い、結果から更新する。探索では、重要な不確実性が減ったことも投資判断の材料になる。すでに費やした時間ではなく、これから得られる価値と必要な投資を比べ、継続・変更・中止を決める。</p>
+<h3 id="section-5-5">判断の偏り</h3>
+<p>思い込みによって判断が偏ることを、バイアスとして点検する。課題への固着、改善の局所最適化、既存の見立てを正当化する行動を分け、問い直す対象を選ぶ。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>判断の場面</th>
+<th>陥り方と影響</th>
+<th>問い直すこと</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ビジョン・戦略</td>
+<td>流行や周囲の賛成に従うバンドワゴン効果。方向を考えずに開発を急ぎ、判断の範囲を狭める。</td>
+<td>目指す世界に合っているか。より広いBig Pictureから、他の選択肢も比べたか。</td>
+</tr>
+<tr>
+<td>課題選択</td>
+<td>取り組む問題を実際以上に重要だと感じる固着バイアス。重要ではない課題に投資し続ける。</td>
+<td>何をもって重要としたか。解決による変化の大きさを見積もるインパクトサイジングで、他の課題と比べ直したか。</td>
+</tr>
+<tr>
+<td>仮説検証・結果の解釈</td>
+<td>自分で作ったものを高く評価するIKEA効果。愛着などから都合のよい数字や声を選び、既存の見立てを正当化すると、判断を更新できない。</td>
+<td>反対の証拠と別の解釈を検討したか。過去の努力を理由にしていないか。今から選んでも、この案に投資するか。</td>
+</tr>
+<tr>
+<td>改善・評価</td>
+<td>一部の指標だけを改善し、全体の価値を損なう最適化の罠。課題選択が妥当でも起こる。</td>
+<td>その数字は顧客の成果を示すか。第4節の観点で、他の人への負担と長期の影響まで確かめたか。</td>
+</tr>
+<tr>
+<td>意思決定・実行・資源配分</td>
+<td>今まで起きなかった問題を軽く見る正常性バイアス。品質や安全性への投資を後回しにする。</td>
+<td>失敗するとしたらなぜか。例外や大きな損失に備え、必要な投資と確認を仕組みにしたか。</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-5-6">他部門への影響</h3>
+<p>ロードマップを組み替えると、開発だけでなく営業やマーケティングの予定にも影響する。必要な変更は行いつつ、他部門の負担や事業全体への影響を引き受け、理由を共有する。組織戦略では、採用時の見極めと、採用後の育成・役割・配置を区別する。「Hire slow, fire fast」は組織判断を曖昧にしないための示唆として扱い、人事上の即断を正当化するものとはしない。</p>
+<h2 id="section-6"><span class="section-number" aria-hidden="true">06</span>行動と成果物</h2>
+<p>モーションは、目的と状況に応じて選ぶ具体的な働きかけ。</p>
+<p>自己評価</p>
+<ul>
+<li>状況判断は、比較的磨かれている。</li>
+<li>モーションの選択・実行の質にはばらつきがある。</li>
+<li>判断を事業全体の目的につなげる視座を高めたい。</li>
+</ul>
+<p>振り返りでは、以下を分ける。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>観点</th>
+<th>確認すること</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>状況判断</td>
+<td>何が起きていると捉えたか</td>
+</tr>
+<tr>
+<td>目的との接続</td>
+<td>なぜ、そこへ働きかける必要があると判断したか</td>
+</tr>
+<tr>
+<td>選択</td>
+<td>他の選択肢と比較して、なぜその動きを選んだか</td>
+</tr>
+<tr>
+<td>実行</td>
+<td>必要な変化が起きるところまで実行できたか</td>
+</tr>
+<tr>
+<td>結果</td>
+<td>何が変わり、次は何を修正するか</td>
+</tr>
+</tbody></table></div>
+<p>自身の記事「共有の会議をするな」は、この実践に当たる。収集なら情報を引き出し、決定なら結論・経緯・計画を伝える。目的によって振る舞いと評価基準を変える。</p>
+<p>アウトプット主義と行動主義は、次のようにつながる。</p>
+<ul>
+<li>節目ごとに、その時点の目的を果たす成果物を作りきる。</li>
+<li>相手が理解・判断できる形で渡す。</li>
+<li>その成果物で何を判断し、その後どう動くかまで考える。</li>
+</ul>
+<h3 id="section-6-1">手法の選択</h3>
+<p>フレームワークやプロセスは、それに従うことを目的にしない。ユーザーストーリーマッピングを書くこと自体がユーザー理解ではなく、理解した結果を整理して伝えるために形式を使う。ビジネスモデルキャンバスは、自分の構想の抜けや矛盾を点検し、別の視点を得るために役立つ。手法は、目的に応じて選ぶ。</p>
+<h3 id="section-6-2">判断基準の共有</h3>
+<p>Over-communicateとは、単に説明を増やすことではない。何を価値と捉え、なぜそう判断したのかを、他人が使える形で共有すること。nanameueでは石濱さんから徹底的に指導を受け、価値の判断基準を共有しながら、自分の意見も述べてものをつくった。途中の作業をすべて見せる必要はないが、他人の判断に影響する前提や変更理由は伝える。</p>
+<h2 id="section-7"><span class="section-number" aria-hidden="true">07</span>事業検証</h2>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>段階</th>
+<th>確かめること</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>作れる</td>
+<td>実際の利用条件で、必要な体験・仕組みが成立するか</td>
+</tr>
+<tr>
+<td>売れる</td>
+<td>顧客が価値を認めて支払い、利用による成果が出るか</td>
+</tr>
+<tr>
+<td>拡販できる</td>
+<td>他の顧客にも、共通する価値・売り方・提供方法が成立するか</td>
+</tr>
+<tr>
+<td>稼げる</td>
+<td>獲得・開発・導入・運用の費用を踏まえて利益が残るか</td>
+</tr>
+</tbody></table></div>
+<p>検証の要点</p>
+<ul>
+<li>売れる → 拡販できる：購入理由と提供方法の共通性</li>
+<li>拡販できる → 稼げる：顧客増加に伴う費用と利益の変化</li>
+</ul>
+<p>一社への個別対応から学び、共通部分、設定で吸収できる差分、個別開発を区別する。</p>
+<p>別のチャットで整理した仮説も、この検証に接続する。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>仮説</th>
+<th>問い</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>ニーズ</td>
+<td>誰が、どんな場面で、何を達成したいか</td>
+</tr>
+<tr>
+<td>課題</td>
+<td>どこで詰まり、何が負担になっているか</td>
+</tr>
+<tr>
+<td>価値</td>
+<td>提案によって行動や成果が改善するか</td>
+</tr>
+<tr>
+<td>収益</td>
+<td>誰が、何に、いくら払うか</td>
+</tr>
+<tr>
+<td>成長</td>
+<td>どう新しい顧客を獲得し、提供を広げるか</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-7-1">検証と更新</h3>
+<p>仮説検証では、課題の重要性、解決策の価値、実現性、収益性を分けて確かめる。検証前に、期待する変化、判断に必要な証拠、継続・変更・中止の条件、次に確かめる時点を定める。</p>
+<p>仮説検証・実行・更新の判断でも、全体に共通する「意思決定の質を高める6要素」を使う。①適切な意思決定スコープ、②意思決定によってもたらされるインパクトの明確化、③実現可能なオプションの洗い出し、④直感に依存しない、信頼できる情報・データ、⑤ロジカル・クリティカルシンキングによる解釈（バイアスの排除）、⑥組織の上から下までコミットしてやり切る。各判断で確かめ直す条件として扱う。</p>
+<p>意思決定では、選ぶ案と見送る案、その理由、担当と実行範囲を明確にする。何が起きたら判断を変えるかも共有し、結果を確かめるところまでやり切る。</p>
+<p>顧客が使わないときは、機能追加に進む前に、導入障壁と課題の重要性を行動・データから確かめる。課題が重要なら手段を変え、重要性が低ければ問題の定義・課題選択へ戻る。対象顧客や期待する変化が違えば戦略を見直し、目指す世界の具体像に疑問が出た場合は、その前提まで戻る。</p>
+<p>振り返りでは、期待と結果の差、外れた前提、次に変える判断を残す。結果の良し悪しと、当時の情報に照らした判断の妥当性を分け、次の意思決定へ反映する。</p>
+<p><a href="https://speakerdeck.com/sonehara/pmconf2024-purodakutomaneziyanoliang-iyi-si-jue-ding-nituitequestsuru-2f3db2b2-56e0-44d7-82aa-10af2520554d">参考：曽根原春樹「プロダクトマネージャーの良い意思決定についてQuestする」</a></p>
+<p><a href="https://www.svpg.com/vision-vs-strategy/">参考：Marty Cagan「Vision vs. Strategy」</a></p>
+<p><a href="https://chatgpt.com/api/library/files/libfile_343f4539f0a0819183e5a93236fb92b8/download">参照：「意思決定の質を高める6要素」（10月21日の対話に添付したスライド）</a></p>
+<p>ビジョン・戦略を前提に、現状理解、ジョブの整理、課題選択、体験設計・検証、要件化をつなげ、その背景と判断をPRDにまとめる。</p>
+<h2 id="section-8"><span class="section-number" aria-hidden="true">08</span>強みと成長課題</h2>
+<p>構造化の強みは、以前から整理している四つの方法として表れている。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>用途</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>点を集める</td>
+<td>判断材料を蓄える</td>
+</tr>
+<tr>
+<td>対比を作る</td>
+<td>差、前提、別の解釈を明らかにする</td>
+</tr>
+<tr>
+<td>レーンをもつ</td>
+<td>全体と個別などを並行して進め、相互に更新する</td>
+</tr>
+<tr>
+<td>一つに束ねる</td>
+<td>コンセプト・言葉・画面として、理解と判断を可能にする</td>
+</tr>
+</tbody></table></div>
+<p>今後は、この構造化の対象範囲を広げる。</p>
+<div class="table-scroll" role="region" aria-label="表" tabindex="0"><table>
+<thead>
+<tr>
+<th>成長課題</th>
+<th>具体的な方向</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>視座を高める</td>
+<td>個別の改善を、事業の目的・戦略・市場構造へ接続する</td>
+</tr>
+<tr>
+<td>視野を広げる</td>
+<td>利用者・買い手・管理者・周辺関係者の影響を捉える</td>
+</tr>
+<tr>
+<td>時間軸を延ばす</td>
+<td>利用が反復・拡大した先の変化を見る</td>
+</tr>
+<tr>
+<td>ドメイン理解を深める</td>
+<td>業界固有の利害、制約、例外、反作用を把握する</td>
+</tr>
+<tr>
+<td>モーションの質を揃える</td>
+<td>選択と実行を分けて振り返り、使える動きを増やす</td>
+</tr>
+</tbody></table></div>
+<h3 id="section-8-1">挑戦と習熟</h3>
+<p>これまで経験を積んできたNやOの領域は、AIにかなり任せられるようになった。その分、自分自身は未知の領域であるLに集中できる。ここでのLとN/Oは、自分の経験との関係で捉える。現在のN/Oも、かつては自分にとってのLだったと考えられる。</p>
+<p>Lで試行錯誤し、結果を確かめ、判断基準を身につける。経験を重ねた部分は、やがてN/Oへ移り得る。そのうちAIに目的や判断基準を渡し、結果を確かめられる部分を委譲する。そこで生まれた時間と注意を、次のLに向ける。</p>
+<p>「Lへの挑戦 → 経験・検証による習熟 → N/Oへの移行 → 任せられる部分の委譲 → 次のLへの挑戦」という循環によって、自分の活動領域を更新し続ける。第8節で挙げた成長課題は、今どの領域に経験を積むかを考える方向になる。強みも成長課題も固定せず、何を自分で考え続け、何を習熟・委譲できる領域へ移すかを見直す。</p>
+<h3 id="section-8-2">直感と熟考</h3>
+<p>素早く自動的に判断する働きをSystem 1、注意を向けて意識的に考える働きをSystem 2と呼ぶ。この区別は思考の働きを捉えるもので、LとN/Oは自分が経験してきた領域を捉えるもの。両者は同じ区分ではない。</p>
+<p>共通するのは、以前は意識して考える必要があったことも、経験を重ねると少ない負担で扱えるようになり、その分の注意を新たな問いに向けられるという点。ただし、N/Oでも複雑な判断や前提の変化にはSystem 2が必要になり、Lでも既存の経験から生まれる直感を出発点にできる。System 1＝N/O、System 2＝Lとは対応させない。</p>
+<p>自分の中で素早く判断できるようになることと、AIに仕事を任せることも分ける。前者は自分の考え方の変化であり、後者は仕事の分担を変えること。経験から素早く気づける力を育てつつ、その直感を検証する姿勢を持つ。条件が変わった場面では、慣れた領域でも前提から考え直す。</p>
+<p>参考：<a href="https://www.nobelprize.org/uploads/2018/06/kahnemann-lecture.pdf">Daniel Kahneman「Maps of Bounded Rationality」</a>（2002年ノーベル賞講演）。L→N/OとAIへの委譲を結びつけた循環は、この文書で整理した自身の仕事観として扱う。</p>
+<h3 id="section-8-3">AIとの協働</h3>
+<p>AIには探索、分析、反証、表現を任せられる。経験を積んだN/Oでは、目的や判断基準を渡し、出てきたものの良し悪しを判断しやすいため、委譲を進められる。ただし、慣れた領域のすべてを一律に任せるのではなく、結果を確かめられる範囲を見極める。どんな体験に心を動かされ、どの価値を選び取るかという判断は、自分自身が引き受ける。</p>
+<p>「お皿型から花瓶型へ」は、AIに任せる際の考えの深め方を表す。広く任せるだけでなく、自分の視点を明確にして渡し、深く考え、文脈を蓄積し、その先で広げる。仮説が変われば、蓄積した考えも更新する。</p>
+<p>この方法は、N/Oで得た判断基準をAIに渡すことにも、Lで問いを定めて考えを深めることにも使う。花瓶型はAIと考えを深める方法を、L→N/Oの循環は経験と分担の更新を示す。両者を組み合わせ、AIに任せて生まれた余地を、新しい領域での試行錯誤に使う。</p>
+<p>チームでは、背景と判断を相手が使える形で渡し、異なる専門や実装から得た発見を、自分の判断へ戻す。</p>
+<p>この文書で整理した成長の方向は、構造化の強みを使い、顧客の具体的な行動から、事業・市場・長期的な影響までを接続して判断できる範囲を広げること。</p>
+<hr>
+<p><a href="https://docs.google.com/document/d/1N2-KqodOIBW9FvaQiAiStdZ0i-KRobJhHVJpYHF5KbE">Googleドキュメント</a></p>
+</article>
+      <footer class="page-footer"><span>Kohey Aoyama</span><a class="back-top" href="#top">ページの先頭へ ↑</a></footer>
+    </main>
+  </div>
+  <script>
+    const headings = [...document.querySelectorAll('.prose h2')];
+    const links = [...document.querySelectorAll('[data-section]')];
+    let scheduled = false;
+    function updateActive() {
+      let current = headings[0]?.id;
+      for (const heading of headings) { if (heading.getBoundingClientRect().top <= 120) current = heading.id; }
+      for (const link of links) { if (link.dataset.section === current) link.setAttribute('aria-current','location'); else link.removeAttribute('aria-current'); }
+      scheduled = false;
+    }
+    addEventListener('scroll',()=>{if(!scheduled){scheduled=true;requestAnimationFrame(updateActive)}},{passive:true});
+    document.querySelectorAll('.mobile-toc a').forEach(link=>link.addEventListener('click',()=>{document.querySelector('.mobile-toc').open=false}));
+    updateActive();
+  </script>
+</body>
+</html>
