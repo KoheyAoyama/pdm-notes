@@ -39,7 +39,7 @@
 
 そのため、意思決定を全体に共通する観点として点検する。何を判断対象にしたか、どんな選択肢と根拠があるか、思い込みに偏っていないか、どの条件で判断を更新するかを確かめる。
 
-参考：[プロダクトマネージャーの良い意思決定についてQuestする](https://speakerdeck.com/sonehara/pmconf2024-purodakutomaneziyanoliang-iyi-si-jue-ding-nituitequestsuru-2f3db2b2-56e0-44d7-82aa-10af2520554d)
+参考：[プロダクトマネージャーの良い意思決定についてQuestする](https://speakerdeck.com/sonehara/pmconf2024-purodakutomaneziyanoliang-iyi-si-jue-ding-nituitequestsuru-2f3db2b2-56e0-44d7-82aa-10af2520554d)／[Decision Qualityの6要素](https://sdg.com/decision-quality/)／[The 6 Principles of Decision Quality](https://smartorg.com/improve-quality-decision-making/)
 
 ## 3．顧客理解と提供価値
 
@@ -187,6 +187,8 @@
 
 資源配分は仮説として扱い、結果から更新する。探索では、重要な不確実性が減ったことも投資判断の材料になる。すでに費やした時間ではなく、これから得られる価値と必要な投資を比べ、継続・変更・中止を決める。
 
+参考：『イシューからはじめよ』
+
 ### 判断の偏り
 
 思い込みによって判断が偏ることを、バイアスとして点検する。課題への固着、改善の局所最適化、既存の見立てを正当化する行動を分け、問い直す対象を選ぶ。
@@ -234,6 +236,8 @@
 
 何を価値と捉え、なぜそう判断したのかを、他の人が判断に使える形で共有する。途中の作業をすべて見せる必要はないが、他の人の判断に影響する前提や変更理由は伝える。
 
+参考：[意思決定の役割分担](https://www.bain.com/insights/rapid-decision-making/)
+
 ## 7．事業検証
 
 | 段階 | 確かめること |
@@ -274,7 +278,7 @@
 
 ビジョン・戦略を前提に、現状理解、ジョブの整理、課題選択、体験設計・検証、要件化をつなげ、その背景と判断をPRDにまとめる。
 
-参考：[意思決定の質と実行](https://speakerdeck.com/sonehara/pmconf2024-purodakutomaneziyanoliang-iyi-si-jue-ding-nituitequestsuru-2f3db2b2-56e0-44d7-82aa-10af2520554d)
+参考：[意思決定の質と実行](https://speakerdeck.com/sonehara/pmconf2024-purodakutomaneziyanoliang-iyi-si-jue-ding-nituitequestsuru-2f3db2b2-56e0-44d7-82aa-10af2520554d)／[判断を記録して振り返る](https://fs.blog/decision-journal/)
 
 ## 8．構造化と習熟
 
@@ -326,3 +330,4 @@ AIには探索、分析、反証、表現を任せられる。経験を積んだ
 チームでは、背景と判断を相手が使える形で渡し、異なる専門や実装から得た発見を、自分の判断へ戻す。
 
 顧客の具体的な行動から、事業・市場・長期的な影響までをつなぎ、判断できる範囲を広げる。
+
